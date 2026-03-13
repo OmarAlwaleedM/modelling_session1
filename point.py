@@ -40,22 +40,22 @@ class Point:
         """
         return self.distance_origin() < other.distance_origin()
 
-p1 = Point(1, 2)
-p2 = Point(3, 4)
-# p3 = Point("bob", [1,2,3]) this is possible but not ideal
-
-print(p1.x, p1.y)
-print(p2.x, p2.y)
-# print(p3.x, p3.y)
-print(p1) # P<1,2>.  The output is in base 16!!! hence this code "0x10cdf6a50" is a NUMBER. this is where this point is stored in memory.
-print(f"{p2} distance to origin is {p2.distance_origin()}")
-p3 = Point(12, 5)
-print(f"{p3} distance to origin is {p3.distance_origin()}")
-p1 = Point(6, 10)
-p2 = Point(6, 15)
-print(f"distance between {p1} and {p2} is {p1.distance_to(p2)}")
-p4 = Point(1, 1)
-points = [p1, p2, p3, p4, Point(15, 6)] # list of points
-print(points)
-points.sort()
-print(points)
+if __name__ == "__main__": # protect the code from import runs!!!
+    p1 = Point(1, 2)
+    p2 = Point(3, 4)
+    # p3 = Point("bob", [1,2,3]) this is possible but not ideal
+    print(p1.x, p1.y)
+    print(p2.x, p2.y)
+    # print(p3.x, p3.y)
+    print(p1) # P<1,2>.  The output is in base 16!!! hence this code "0x10cdf6a50" is a NUMBER. this is where this point is stored in memory.
+    print(f"{p2} distance to origin is {p2.distance_origin()}")
+    p3 = Point(12, 5)
+    print(f"{p3} distance to origin is {p3.distance_origin()}")
+    p1 = Point(6, 10)
+    p2 = Point(6, 15)
+    print(f"distance between {p1} and {p2} is {p1.distance_to(p2)}")
+    p4 = Point(1, 1)
+    points = [p1, p2, p3, p4, Point(15, 6)] # list of points
+    print(points)
+    points.sort()
+    print(points)
